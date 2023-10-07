@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.video-container {
+  max-width: 800px;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para los controles de video */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-container:hover video::-webkit-media-controls {
+  display: initial !important;
+}
+
+/* Personalización de los controles de video */
+.video-container video {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+/* Estilos para los controles personalizados */
+.video-controls {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.play-pause-button,
+.fullscreen-button {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.play-pause-button:hover,
+.fullscreen-button:hover {
+  color: #00bcd4;
+}
